@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@interview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.SpurningarController">
+   <children>
+      <Button fx:id="spurningarSvaraButton" layoutX="78.0" layoutY="321.0" mnemonicParsing="false" onAction="#onSvaraButton" text="Svara" />
+      <Button fx:id="spurningarTilBakaButton" layoutX="272.0" layoutY="321.0" mnemonicParsing="false" onAction="#onTilBakaButton" text="Til baka" />
+      <Button fx:id="spurningarHaettaButton" layoutX="475.0" layoutY="321.0" mnemonicParsing="false" onAction="#onHaettaButton" text="Hætta" />
+      <ListView fx:id="flokkarListView" layoutX="62.0" layoutY="14.0" prefHeight="130.0" prefWidth="231.0" />
+      <ListView fx:id="spurningarListView" layoutX="62.0" layoutY="163.0" prefHeight="130.0" prefWidth="231.0" />
+      <Label fx:id="spurningarLogLabel" layoutX="461.0" layoutY="74.0" />
+      <ScrollPane layoutX="339.0" layoutY="14.0" prefHeight="227.0" prefWidth="231.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="spurningarTextArea" editable="false" prefHeight="227.0" prefWidth="231.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label fx:id="fjoldiSpurningaLabel" layoutX="495.0" layoutY="261.0" prefHeight="18.0" prefWidth="0.0" text="0" />
+      <Label layoutX="339.0" layoutY="261.0" prefHeight="18.0" prefWidth="145.0" text="Fjöldi svaraðra spurninga:" />
+   </children>
+</AnchorPane>
