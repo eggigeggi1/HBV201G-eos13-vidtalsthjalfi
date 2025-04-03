@@ -49,6 +49,11 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/eggig/Downloads/EOS/EGSS/InterviewTrainer&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="vidmot" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.InterviewApplication">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />

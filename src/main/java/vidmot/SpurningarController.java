@@ -2,6 +2,7 @@ package vidmot;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import vinnsla.LanguageSettings;
 import vinnsla.Spurningar;
 
 public class SpurningarController {
@@ -12,6 +13,14 @@ public class SpurningarController {
     public Label fjoldiSpurningaLabel;
     /** textabox fyrir svaraðar spurningar. */
     public TextArea spurningarTextArea;
+    /** Svara button */
+    public Button spurningarSvaraButton;
+    /** Til baka button */
+    public Button spurningarTilBakaButton;
+    /** Hætta button */
+    public Button spurningarHaettaButton;
+    /** Svaraðar spurningar */
+    public Label svaradarSpurningar;
     /** index fyrir flokka listann. */
     private int virkurIndex;
     /** vinnsluklasi. */
@@ -26,21 +35,46 @@ public class SpurningarController {
     public void initialize() {
         fjoldiSpurningaLabel.textProperty().bind(
                 spurningar.spurningarProperty());
-        flokkarListView.setItems(spurningar.getFlokkar());
-        flokkarListView.getSelectionModel().selectedIndexProperty()
-                .addListener((obs, old, newIndex) -> {
-                    if (newIndex.intValue() >= 0) {
-                        virkurIndex = newIndex.intValue();
-                        if (virkurIndex == 0) {
-                            spurningarListView.setItems(spurningar.
-                                    getSpurningalisti("Tæknispurningar"));
+        if (LanguageSettings.isEnglish()) {
+            flokkarListView.setItems(spurningar.getFlokkarEnglish());
+            flokkarListView.getSelectionModel().selectedIndexProperty()
+                    .addListener((obs, old, newIndex) -> {
+                        if (newIndex.intValue() >= 0) {
+                            virkurIndex = newIndex.intValue();
+                            if (virkurIndex == 0) {
+                                spurningarListView.setItems(spurningar.
+                                        getSpurningalistiEnglish(
+                                                "Tæknispurningar"));
+                            }
+                            else if (virkurIndex == 1) {
+                                spurningarListView.setItems(spurningar.
+                                        getSpurningalistiEnglish(
+                                                "Færnispurningar"));
+                            }
                         }
-                        else if (virkurIndex == 1) {
-                            spurningarListView.setItems(spurningar.
-                                    getSpurningalisti("Færnispurningar"));
+                    });
+            spurningarSvaraButton.setText("Answer");
+            spurningarHaettaButton.setText("Quit");
+            spurningarTilBakaButton.setText("Back");
+            svaradarSpurningar.setText("Answered questions: ");
+        }
+        else {
+            flokkarListView.setItems(spurningar.getFlokkar());
+            flokkarListView.getSelectionModel().selectedIndexProperty()
+                    .addListener((obs, old, newIndex) -> {
+                        if (newIndex.intValue() >= 0) {
+                            virkurIndex = newIndex.intValue();
+                            if (virkurIndex == 0) {
+                                spurningarListView.setItems(spurningar.
+                                        getSpurningalisti("Tæknispurningar"));
+                            }
+                            else if (virkurIndex == 1) {
+                                spurningarListView.setItems(spurningar.
+                                        getSpurningalisti("Færnispurningar"));
+                            }
                         }
-                    }
-                });
+                    });
+        }
     }
 
     /**
