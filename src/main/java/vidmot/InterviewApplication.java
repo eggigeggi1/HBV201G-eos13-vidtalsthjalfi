@@ -14,8 +14,8 @@ public class InterviewApplication extends Application {
         // Setjum senuna sem núverandi senu
         ViewSwitcher.setScene(scene);
 
-        // skiptum yfir í viðmótstré fyrir LOGIN
-        ViewSwitcher.switchTo(View.VELKOMINN);
+        // skiptum yfir í viðmótstré fyrir LANGUAGE
+        ViewSwitcher.switchTo(View.LANGUAGE);
 
         // tengjum senuna við gluggann
         stage.setScene(scene);
