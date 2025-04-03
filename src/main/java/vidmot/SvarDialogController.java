@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import vinnsla.HuggingFaceClient;
+import vinnsla.LanguageSettings;
 
 import java.io.IOException;
 
@@ -16,6 +17,8 @@ public class SvarDialogController extends Dialog<String> {
     public TextArea feedbackField;
     /** AI client */
     public  HuggingFaceClient client;
+    /** Button fyrir feedback */
+    public Button feedbackButton;
 
     /**
      * Smiður fyrir klasann. Setur upp dialoginn, setur spurninguna sem var
@@ -35,6 +38,9 @@ public class SvarDialogController extends Dialog<String> {
             }
         });
 
+        if(LanguageSettings.isEnglish()) {
+            feedbackButton.setText("Get feedback");
+        }
     }
 
     /**
@@ -43,7 +49,9 @@ public class SvarDialogController extends Dialog<String> {
      */
     private DialogPane lesaSvarDialog() {
         FXMLLoader fxmlLoader =
-                new FXMLLoader(getClass().getResource("svar-view.fxml"));
+                new FXMLLoader(getClass().getResource(
+                        LanguageSettings.isEnglish() ?
+                                "svar-view-english.fxml" : "svar-view.fxml"));
         try {
             fxmlLoader.setController(this);
             return fxmlLoader.load();

@@ -30,7 +30,7 @@ public class SpurningarController {
      * Hér er fjoldiSpurninga bundinn við property í vinnsluklasanum,
      * flokkar listinn fylltur af réttum gildum úr vinnsluklasa,
      * og changelistener bætt við til að réttar spurningar birtist í
-     * spurningalistanum.
+     * spurningalistanum. Breytist eftir tungumáli.
      */
     public void initialize() {
         fjoldiSpurningaLabel.textProperty().bind(
