@@ -15,9 +15,9 @@ public class SvarDialogController extends Dialog<String> {
     public TextField svarTextField;
     /** Label fyrir feedback frá bakenda. */
     public TextArea feedbackField;
-    /** AI client */
+    /** AI client. */
     public  HuggingFaceClient client;
-    /** Button fyrir feedback */
+    /** Button fyrir feedback. */
     public Button feedbackButton;
 
     /**
@@ -38,7 +38,7 @@ public class SvarDialogController extends Dialog<String> {
             }
         });
 
-        if(LanguageSettings.isEnglish()) {
+        if (LanguageSettings.isEnglish()) {
             feedbackButton.setText("Get feedback");
         }
     }
@@ -50,8 +50,8 @@ public class SvarDialogController extends Dialog<String> {
     private DialogPane lesaSvarDialog() {
         FXMLLoader fxmlLoader =
                 new FXMLLoader(getClass().getResource(
-                        LanguageSettings.isEnglish() ?
-                                "svar-view-english.fxml" : "svar-view.fxml"));
+                        LanguageSettings.isEnglish()
+                                ? "svar-view-english.fxml" : "svar-view.fxml"));
         try {
             fxmlLoader.setController(this);
             return fxmlLoader.load();
@@ -70,17 +70,24 @@ public class SvarDialogController extends Dialog<String> {
         String svar = svarTextField.getText();
         try {
             String prompt = String.format(
-                    "You are an expert interview coach. Use the following criteria to evaluate my response:\n" +
+                    "You are an expert interview coach. Use the following " +
+                            "criteria to evaluate my response:\n" +
                             "\n" +
-                            "1. Relevance: Does the answer address the question clearly and directly?\n" +
-                            "2. Helpfulness: Is the answer informative, complete, and insightful?\n" +
-                            "3. Professionalism: Is the tone appropriate, and is the language well-structured?\n" +
+                            "1. Relevance: Does the answer address the " +
+                            "question clearly and directly?\n" +
+                            "2. Helpfulness: Is the answer informative, " +
+                            "complete, and insightful?\n" +
+                            "3. Professionalism: Is the tone appropriate, " +
+                            "and is the language well-structured?\n" +
                             "\n" +
                             "Interview Question: %s\n" +
                             "\n" +
                             "My Answer: %s\n" +
                             "\n" +
-                            "Address me directly, Please evaluate the answer on each criterion (1 to 5), provide a brief explanation for each, and then give an overall comment." +
+                            "Address me directly, Please evaluate the answer " +
+                            "on each criterion (1 to 5), provide a brief " +
+                            "explanation for each, and then give an overall " +
+                            "comment." +
                             "(Feedback-below)",
                     spurningLabel.getText(),
                     svar
@@ -89,7 +96,7 @@ public class SvarDialogController extends Dialog<String> {
                     prompt);
             feedbackField.setText(feedback);
         }
-        catch(IOException e) {
+        catch (IOException e) {
             feedbackField.setText(e.getMessage());
         }
 

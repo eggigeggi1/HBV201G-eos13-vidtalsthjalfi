@@ -6,13 +6,20 @@ import javafx.scene.control.Label;
 import vinnsla.LanguageSettings;
 
 public class VelkominnController {
+    /** Spurningar takki. */
     public Button welcomeSpurningarButton;
+    /** Hætta takki. */
     public Button welcomeHaettaButton;
+    /** Ferilskrár takki. */
     public Button welcomeFerilskrarButton;
+    /** Upplýsingar takki. */
     public Button welcomeUpplysingarButton;
+    /** Label fyrir velkominn skilaboð. */
     public Label welcomeLabel;
 
-
+    /**
+     * Setjum tungumál á ensku ef á við.
+     */
     public void initialize() {
         if (LanguageSettings.isEnglish()) {
             welcomeLabel.setText("Welcome to the Interview Trainer!");

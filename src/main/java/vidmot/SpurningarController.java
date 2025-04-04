@@ -6,6 +6,7 @@ import vinnsla.LanguageSettings;
 import vinnsla.Spurningar;
 
 public class SpurningarController {
+    /** Listi fyrir flokka. */
     public ListView flokkarListView;
     /** listi fyrir spurningar. */
     public ListView spurningarListView;
@@ -13,13 +14,13 @@ public class SpurningarController {
     public Label fjoldiSpurningaLabel;
     /** textabox fyrir svaraðar spurningar. */
     public TextArea spurningarTextArea;
-    /** Svara button */
+    /** Svara button. */
     public Button spurningarSvaraButton;
-    /** Til baka button */
+    /** Til baka button. */
     public Button spurningarTilBakaButton;
-    /** Hætta button */
+    /** Hætta button. */
     public Button spurningarHaettaButton;
-    /** Svaraðar spurningar */
+    /** Svaraðar spurningar. */
     public Label svaradarSpurningar;
     /** index fyrir flokka listann. */
     private int virkurIndex;

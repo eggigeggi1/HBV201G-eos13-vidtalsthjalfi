@@ -36,7 +36,8 @@ public class Spurningar {
         ObservableList<String> taeknispurningar =
                 FXCollections.observableArrayList(
                     "Hvaða forritunarmál kannt þú?",
-                    "Hvað er recursion, og hvenær myndirðu nota það í forritun?",
+                    "Hvað er recursion, og hvenær myndirðu nota það í " +
+                            "forritun?",
                     "Hvað er SQL injection, og hvernig geturðu varist því?",
                     "Hver er munurinn á stack og heap í minnisstjórnun?",
                     "Hvernig metur þú hraða reiknirits?"

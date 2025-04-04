@@ -7,12 +7,14 @@ import javafx.scene.control.Label;
 import vinnsla.LanguageSettings;
 
 public class KvedjaController {
-    /** Label fyrir kveðju */
+    /** Label fyrir kveðju. */
     public Label kvedjaLabel;
-    /** Button fyrir að loka forriti */
+    /** Button fyrir að loka forriti. */
     public Button kvedjaHaettaButton;
 
-
+    /**
+     * Breytum í ensku ef á við.
+     */
     public void initialize() {
         if (LanguageSettings.isEnglish()) {
             kvedjaLabel.setText("Good luck on your interview!");
