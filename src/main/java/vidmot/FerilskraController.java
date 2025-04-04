@@ -10,20 +10,20 @@ import vinnsla.LanguageSettings;
 import java.io.IOException;
 
 public class FerilskraController {
-    /** Feedback text area */
+    /** Feedback text area. */
     public TextArea cvFeedbackText;
-    /** Input CV text area */
+    /** Input CV text area. */
     public TextArea cvInputText;
-    /** Instructions label */
+    /** Instructions label. */
     public Label instructionsLabel;
-    /** Button fyrir endurgjöf */
+    /** Button fyrir endurgjöf. */
     public Button feedbackButton;
-    /** Button til að fara til baka */
+    /** Button til að fara til baka. */
     public Button tilBakaButton;
-    /** AI client */
+    /** AI client. */
     public HuggingFaceClient client;
 
-    /** Störtum AI client með HuggingFace API key, breytum í ensku ef þarf */
+    /** Störtum AI client með HuggingFace API key, breytum í ensku ef þarf. */
     public void initialize() {
         client = new HuggingFaceClient(
                 "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");
@@ -34,6 +34,11 @@ public class FerilskraController {
             tilBakaButton.setText("Back");
         }
     }
+
+    /**
+     * Hér er AI clientinn beðinn um feedback.
+     * @param actionEvent
+     */
     public void onFeedbackCV(ActionEvent actionEvent) {
         String input = cvInputText.getText();
         String prompt = "You are an expert on CV construction. Evaluate the " +
@@ -46,11 +51,15 @@ public class FerilskraController {
                     prompt);
             cvFeedbackText.setText(feedback);
         }
-        catch(IOException e) {
+        catch (IOException e) {
             cvFeedbackText.setText(e.getMessage());
         }
     }
 
+    /**
+     * Skiptum í VELKOMINN view.
+     * @param actionEvent
+     */
     public void onTilBaka(ActionEvent actionEvent) {
         ViewSwitcher.switchTo(View.VELKOMINN);
     }
