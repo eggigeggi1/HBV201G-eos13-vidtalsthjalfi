@@ -1,6 +1,136 @@
 .textLabel {
-    -fx-background-color: #f0f0f0;
-    -fx-border-color: #000000;
+    -fx-background-color: linear-gradient(to bottom, #ff9bb8, #d23c77);
+    -fx-border-color: #d23c77;
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.root {
+    -fx-base: #f8d6e3;
+    -fx-background: #f8d6e3;
+    -fx-accent: #d23c77;
+    -fx-focus-color: #ff69b4;
+}
+
+.text, .label, .button {
+    -fx-font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #ff9bb8, #d23c77);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 0, 2, 0, 1);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff8fab, #c12a6a);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 0, 3, 0, 1.5);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #d23c77, #a81c56);
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 0, 2, 0, 1);
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to bottom, #ff6b9d, #c41e6d);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 10px 24px;
+}
+
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-border-color: #e8b4c8;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #ff69b4;
+    -fx-effect: dropshadow(gaussian, rgba(255,105,180,0.3), 0, 0, 0, 2);
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: #fff0f5;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: linear-gradient(to bottom, #ff9bb8, #d23c77);
+    -fx-background-radius: 10px;
+}
+
+
+.dialog-pane {
+    -fx-background-color: #f8d6e3;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #f8d6e3;
+}
+
+.dialog-pane .button {
+    -fx-background-color: linear-gradient(to bottom, #ff9bb8, #d23c77);
+    -fx-text-fill: white;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #e8b4c8;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);
+}
+
+.list-view .list-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-text-fill: #5d2e46;
+    -fx-font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    -fx-font-size: 10px;
+    -fx-padding: 10px 15px;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: #fff9fb;
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: #ff9bb8;
+    -fx-text-fill: white;
+}
+
+.list-view .list-cell:filled:hover {
+    -fx-background-color: #ffe6f0;
+    -fx-cursor: hand;
+}
+
+.list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #ff8fab;
+}
+
+.list-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-padding: 5px;
+}
+
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-color: linear-gradient(to bottom, #ff9bb8, #d23c77);
+    -fx-background-radius: 10px;
+}
+
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
 }
