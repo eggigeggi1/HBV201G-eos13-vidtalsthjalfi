@@ -21,7 +21,7 @@
 </details>
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+### About The Project
 
 Project Description
 The Interview Trainer is a JavaFX application designed to help users practice for technical interviews. It features:
