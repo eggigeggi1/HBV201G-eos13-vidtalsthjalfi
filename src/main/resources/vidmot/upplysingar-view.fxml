@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.UpplysingarController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@interview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.UpplysingarController">
    <children>
       <ImageView fx:id="slideshow" fitHeight="309.0" fitWidth="431.0" layoutX="85.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -17,8 +17,8 @@
       </ImageView>
       <Button fx:id="leftButton" layoutX="36.0" layoutY="188.0" mnemonicParsing="false" onAction="#onLeft" text="&lt;" />
       <Button fx:id="rightButton" layoutX="537.0" layoutY="187.0" mnemonicParsing="false" onAction="#onRight" text="&gt;" />
-      <Button fx:id="tilBakaButton" layoutX="274.0" layoutY="350.0" mnemonicParsing="false" onAction="#onBack" text="Til baka" />
-      <Label fx:id="infoLabel" layoutX="103.0" layoutY="28.0" text="Hollráð varðandi ráðningarferli frá mannauðssérfræðingi">
+      <Button fx:id="tilBakaButton" layoutX="259.0" layoutY="351.0" mnemonicParsing="false" onAction="#onBack" text="Til baka" />
+      <Label fx:id="infoLabel" alignment="CENTER" layoutX="85.0" layoutY="28.0" prefHeight="34.0" prefWidth="431.0" styleClass="textLabel" text="Kynning frá mannauðssérfræðingi varðandi ráðningu" textAlignment="CENTER">
          <font>
             <Font size="16.0" />
          </font>

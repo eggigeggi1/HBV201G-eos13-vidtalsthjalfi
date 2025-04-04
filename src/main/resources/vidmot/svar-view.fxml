@@ -15,10 +15,10 @@
          <children>
             <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="610.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                <children>
-                  <Label fx:id="spurningLabel" VBox.vgrow="ALWAYS" />
-                  <TextField fx:id="svarTextField" alignment="TOP_LEFT" prefHeight="63.0" prefWidth="440.0" promptText="Answer here" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="spurningLabel" alignment="CENTER" prefHeight="58.0" prefWidth="606.0" styleClass="textLabel" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
+                  <TextField fx:id="svarTextField" alignment="TOP_LEFT" prefHeight="63.0" prefWidth="440.0" VBox.vgrow="ALWAYS" />
                   <Button fx:id="feedbackButton" mnemonicParsing="false" onAction="#onFeedbackButton" text="Fá feedback" />
-                  <TextArea fx:id="feedbackField" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                  <TextArea fx:id="feedbackField" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
          </children></AnchorPane>

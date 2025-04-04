@@ -5,13 +5,12 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.FerilskraController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@interview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vidmot.FerilskraController">
    <children>
-      <TextArea fx:id="cvFeedbackText" layoutX="47.0" layoutY="217.0" prefHeight="136.0" prefWidth="506.0" wrapText="true" />
-      <TextArea fx:id="cvInputText" layoutX="47.0" layoutY="46.0" prefHeight="111.0" prefWidth="490.0" wrapText="true" />
-      <Label fx:id="instructionsLabel" layoutX="131.0" layoutY="14.0" text="Afritaðu og límdu ferilskrána þína í textaboxið hér fyrir neðan" />
-      <Button fx:id="feedbackButton" layoutX="258.0" layoutY="174.0" mnemonicParsing="false" onAction="#onFeedbackCV" text="Endurgjöf" />
-      <Button fx:id="tilBakaButton" layoutX="264.0" layoutY="363.0" mnemonicParsing="false" onAction="#onTilBaka" text="Til Baka" />
+      <TextArea fx:id="cvFeedbackText" layoutX="47.0" layoutY="209.0" prefHeight="136.0" prefWidth="506.0" styleClass="text-area" wrapText="true" />
+      <TextArea fx:id="cvInputText" layoutX="47.0" layoutY="46.0" prefHeight="111.0" prefWidth="506.0" styleClass="text-area" wrapText="true" />
+      <Label fx:id="instructionsLabel" alignment="CENTER" layoutX="69.0" layoutY="14.0" prefHeight="26.0" prefWidth="462.0" styleClass="textLabel" text="Afritaðu og límdu ferilskrána þína í textaboxið hér fyrir neðan" textAlignment="CENTER" />
+      <Button fx:id="feedbackButton" layoutX="251.0" layoutY="165.0" mnemonicParsing="false" onAction="#onFeedbackCV" text="Endurgjöf" />
+      <Button fx:id="tilBakaButton" layoutX="258.0" layoutY="353.0" mnemonicParsing="false" onAction="#onTilBaka" text="Til Baka" />
    </children>
 </AnchorPane>

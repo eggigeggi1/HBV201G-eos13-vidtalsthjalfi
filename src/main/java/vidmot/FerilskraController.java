@@ -27,6 +27,7 @@ public class FerilskraController {
     public void initialize() {
         client = new HuggingFaceClient(
                 "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");
+
         if (LanguageSettings.isEnglish()) {
             instructionsLabel.setText("Copy and paste your CV below");
             feedbackButton.setText("Feedback");

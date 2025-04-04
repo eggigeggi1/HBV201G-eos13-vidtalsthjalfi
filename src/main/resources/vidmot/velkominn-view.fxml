@@ -12,9 +12,9 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="welcomeSpurningarButton" layoutX="100.0" layoutY="337.0" mnemonicParsing="false" onAction="#onSpurningarButton" text="Spurningar" />
+      <Button fx:id="welcomeSpurningarButton" layoutX="84.0" layoutY="337.0" mnemonicParsing="false" onAction="#onSpurningarButton" text="Spurningar" />
       <Button fx:id="welcomeHaettaButton" layoutX="439.0" layoutY="337.0" mnemonicParsing="false" onAction="#onWelcomeHaettaButton" text="Hætta" />
-      <Button fx:id="welcomeFerilskrarButton" layoutX="217.0" layoutY="337.0" mnemonicParsing="false" onAction="#onFerilskrarButton" text="Ferilskrár" />
-      <Button fx:id="welcomeUpplysingarButton" layoutX="329.0" layoutY="337.0" mnemonicParsing="false" onAction="#onUpplysingarButton" text="Upplýsingar" />
+      <Button fx:id="welcomeFerilskrarButton" layoutX="206.0" layoutY="337.0" mnemonicParsing="false" onAction="#onFerilskrarButton" text="Ferilskrár" />
+      <Button fx:id="welcomeUpplysingarButton" layoutX="311.0" layoutY="337.0" mnemonicParsing="false" onAction="#onUpplysingarButton" text="Upplýsingar" />
    </children>
 </AnchorPane>
