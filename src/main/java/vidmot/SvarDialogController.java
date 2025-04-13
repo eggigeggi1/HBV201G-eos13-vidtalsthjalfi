@@ -70,9 +70,10 @@ public class SvarDialogController extends Dialog<String> {
         String svar = svarTextField.getText();
         try {
             String prompt = String.format(
-                    "You are an expert interview coach. Use the following " +
-                            "criteria to evaluate my response:\n" +
-                            "\n" +
+                    "You are an expert interview coach, evaluating a foreign" +
+                            " woman in Iceland's interview question responses. " +
+                            "Use the following criteria to evaluate my " +
+                            "response:\n \n" +
                             "1. Relevance: Does the answer address the " +
                             "question clearly and directly?\n" +
                             "2. Helpfulness: Is the answer informative, " +
